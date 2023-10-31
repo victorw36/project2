@@ -3,15 +3,12 @@ import java.util.Scanner;
 public class LinearEquationLogic {
 
     private Scanner myScanner;
-    private int x1;
-    private int x2;
-    private int y1;
-    private int y2;
+    private LinearEquation linearEquation;
 
 
-    public void LinearEquation () {
+    public LinearEquationLogic() {
         myScanner = new Scanner(System.in);
-
+        linearEquation = null;
     }
     private void enterOrderedPair() {
         String orderedPair = "";
@@ -34,9 +31,14 @@ public class LinearEquationLogic {
 
         String digit4 = orderedPair2.substring(index + 2, orderedPair2.length() - 1);
         int y2 = Integer.parseInt(digit4);
+
+        linearEquation = new LinearEquation(x1, y1, x2, y2);
+
     }
-    private void start() {
+    public void start() {
         enterOrderedPair();
+
+
 
     }
 
