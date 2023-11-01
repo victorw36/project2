@@ -49,14 +49,18 @@ public class LinearEquationLogic {
         String answer = myScanner.nextLine();
         while (answer.equals("y")) {
             enterOrderedPair();
+            System.out.println();
             System.out.print(linearEquation.lineInfo());
             System.out.println();
             System.out.print("Enter a value for x: ");
-            x = myScanner.nextInt();
+            x = myScanner.nextDouble();
+            System.out.println();
             System.out.println(linearEquation.coordinateForX(x));
+            System.out.println();
             System.out.print("Do you want to enter more coordinates(y/n): ");
             answer = myScanner.nextLine();
         }
+        System.out.print("Have a good day");
 
 
 
